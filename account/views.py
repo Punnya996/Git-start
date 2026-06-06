@@ -14,3 +14,16 @@ def homeView(request):
 def aboutView(request):
     return render(request,"about.html")
 
+def worksView(request):
+    username="amalkrishna"
+    services=["web development","photography","caretaker","nurse"]
+    works=[{"id":1,"name":"abu","dept":"cse","age":32},
+            {"id":2,"name":"vinu","dept":"eee","age":31},
+            {"id":3,"name":"manu","dept":"mech","age":30},
+            {"id":4,"name":"kavu","dept":"civil","age":39}]
+    return render(request,"works.html",{"uname":username,"service_list":services,"works":works})
+
+def addWorksView(request):
+    return render(request,"addworks.html")
+
+
